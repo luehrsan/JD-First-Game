@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctaub7cklx7m8"
-path="res://.godot/imported/FirstWallFlagRush.jpg-f739942b8305170da368140adafdf0cd.ctex"
+uid="uid://dfvifxju71xxn"
+path="res://.godot/imported/Corners of wall.png-a11ca0ba48b16e4d7bcc18f2b776c0fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://FirstWallFlagRush.jpg"
-dest_files=["res://.godot/imported/FirstWallFlagRush.jpg-f739942b8305170da368140adafdf0cd.ctex"]
+source_file="res://Art/Corners of wall.png"
+dest_files=["res://.godot/imported/Corners of wall.png-a11ca0ba48b16e4d7bcc18f2b776c0fc.ctex"]
 
 [params]
 
