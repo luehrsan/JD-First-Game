@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://by7py2t24c6my"]
+
+[ext_resource type="Texture2D" uid="uid://dd8eyfx2kof6r" path="res://Art/TempEnemiesFR.png" id="1_q6bmp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ni0hq"]
+size = Vector2(30, 30)
+
+[node name="Enemies" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ni0hq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_q6bmp")
