@@ -5,6 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://c2r7rk2n0luy" path="res://player.tscn" id="3_an7m4"]
 [ext_resource type="PackedScene" uid="uid://by7py2t24c6my" path="res://enemies.tscn" id="4_t7ben"]
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_tf3gp"]
+vertices = PackedVector2Array(31.7109, 56.0234, 770.977, 57.9609, 769.68, 64.9688, 32.9375, 62.9688, 31, 80.2891, 37.9375, 949.547, 34.9531, 949.422)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3, 5, 6)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(778, 75, 43, 73, 21, 80, 22, 46, 783, 48), PackedVector2Array(25, 959, 48, 960, 43, 73, 21, 80)])
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_45ct2"]
 texture = ExtResource("1_3oj87")
 texture_region_size = Vector2i(30, 30)
@@ -47,12 +52,14 @@ physics_layer_0/collision_mask = 11
 sources/0 = SubResource("TileSetAtlasSource_45ct2")
 sources/3 = SubResource("TileSetAtlasSource_7o8qb")
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_tf3gp"]
-vertices = PackedVector2Array(54.9688, 955, 41.9922, 955, 41.0078, 92, 52.0313, 92, 796.25, 50.9375, 796.727, 69.0313, 41.4531, 71.9531, 42.5625, 47.0391)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(33, 37, 806, 41, 807, 79, 31, 82), PackedVector2Array(32, 965, 65, 965, 62, 82, 31, 82)])
-
 [node name="Level" type="Node2D"]
+
+[node name="Enemies" parent="." instance=ExtResource("4_t7ben")]
+position = Vector2(745, 60)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(12, -3)
+navigation_polygon = SubResource("NavigationPolygon_tf3gp")
 
 [node name="Map1" type="TileMapLayer" parent="."]
 position = Vector2(-1, 0)
@@ -63,8 +70,3 @@ tile_set = SubResource("TileSet_nlupe")
 [node name="Player" parent="." instance=ExtResource("3_an7m4")]
 position = Vector2(51, 503)
 collision_mask = 14
-
-[node name="Enemies" parent="." instance=ExtResource("4_t7ben")]
-
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Enemies"]
-navigation_polygon = SubResource("NavigationPolygon_tf3gp")
