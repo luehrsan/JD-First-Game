@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://bontuploty6sc"]
+[gd_scene load_steps=11 format=4 uid="uid://bontuploty6sc"]
 
 [ext_resource type="Texture2D" uid="uid://dwty1rvdf0ubq" path="res://Art/WallFlagRush.png" id="1_3oj87"]
+[ext_resource type="Script" path="res://level.gd" id="1_wqamp"]
 [ext_resource type="Texture2D" uid="uid://dfvifxju71xxn" path="res://Art/Corners of wall.png" id="2_wg1sv"]
 [ext_resource type="PackedScene" uid="uid://c2r7rk2n0luy" path="res://player.tscn" id="3_an7m4"]
 [ext_resource type="PackedScene" uid="uid://by7py2t24c6my" path="res://enemies.tscn" id="4_t7ben"]
+[ext_resource type="PackedScene" uid="uid://csrfup02bf07f" path="res://flag.tscn" id="6_a6wmq"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_tf3gp"]
 vertices = PackedVector2Array(510.211, 946.961, 778.211, 948.039, 508.109, 947, 775.969, 186, 680.133, 186, 472.211, 185.727, 511.211, 180.078, 777.328, 177.922, 138, 826.883, 496.5, 826, 675, 826, 506.891, 832.938, 310, 834.063, 37.8984, 830.797, 38.0703, 828.117, 676.102, 422.25, 675.867, 500.633, 336, 825.602, 337.109, 301, 342.398, 300.477, 469.789, 307.563, 404.109, 311.07, 574.172, 308.789, 406, 312.203, 777, 826.867, 777.031, 504.383, 780, 74.8438, 781.977, 950, 673.906, 186, 476.297, 186, 777, 509.867, 675.07, 585, 679, 511.133, 679, 828.133, 675, 593.25, 773.68, 65.0391, 477, 824.047, 319.328, 823.008, 141.047, 826.18, 240, 438.844, 232.648, 581.609, 238.391, 428.727, 246.492, 309.93, 574.828, 590.742, 576.828, 711.102, 573.063, 700.711, 571.938, 509.867, 572, 443.172, 576.398, 303.18, 576.992, 318.008, 574.789, 419.75, 48.2031, 950, 303.578, 947.961, 780.656, 55.0078, 308.438, 836.211, 310, 947, 475.5, 511.141, 479.477, 591.852, 472, 583.094, 472, 520.938, 475, 506, 474.438, 821.719, 344.32, 825.273, 477, 712.102, 469.57, 711, 407.539, 590.852, 343, 581.906, 405.109, 591, 337.258, 591, 343, 522.25, 339.273, 511.609, 340.367, 505, 31.7109, 55.9766, 508.789, 63.9609, 508.211, 64.0625, 308, 62.9375, 307.32, 63, 32.8984, 63, 31, 80.2891, 34.1016, 181.078, 33.9297, 184.883, 402.891, 423.148, 406, 423.148, 775.789, 833, 472.688, 305.203, 459.883, 704.008, 340.68, 711, 403.891, 705.711, 138, 512.117, 139.953, 587.461, 507.781, 833, 505.789, 179.953, 308, 181.063, 335.891, 187.063, 141.047, 185.938, 139.031, 186.117, 139.953, 420.867, 137.969, 501.883, 303.688, 178.922, 337.57, 189.273, 336, 710.898, 412.406, 701.508, 577.078, 585, 575.93, 433.258, 238, 301, 238, 422.133, 141, 431.258, 141, 585.43, 241.117, 702, 350.594, 702, 237, 711.891, 237, 592.508, 238.883, 515.367, 673.922, 430.742, 570.813, 506, 470.883, 431, 475, 422.141, 391.758, 431, 337.367, 422.148, 340.758, 433.492, 241.18, 505, 35.9297, 510.883, 36.0703, 503.117, 39.1016, 949.039, 34.9531, 949.422)
@@ -53,6 +55,7 @@ sources/0 = SubResource("TileSetAtlasSource_45ct2")
 sources/3 = SubResource("TileSetAtlasSource_7o8qb")
 
 [node name="Level" type="Node2D"]
+script = ExtResource("1_wqamp")
 
 [node name="Enemies" parent="." instance=ExtResource("4_t7ben")]
 position = Vector2(745, 60)
@@ -69,6 +72,148 @@ tile_set = SubResource("TileSet_nlupe")
 
 [node name="Player" parent="." instance=ExtResource("3_an7m4")]
 position = Vector2(51, 503)
-collision_mask = 14
+
+[node name="FlagPositions" type="Node" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="FlagPositions"]
+position = Vector2(47, 58)
+
+[node name="Marker2D2" type="Marker2D" parent="FlagPositions"]
+position = Vector2(321, 56)
+
+[node name="Marker2D3" type="Marker2D" parent="FlagPositions"]
+position = Vector2(521, 58)
+
+[node name="Marker2D4" type="Marker2D" parent="FlagPositions"]
+position = Vector2(791, 58)
+
+[node name="Marker2D5" type="Marker2D" parent="FlagPositions"]
+position = Vector2(691, 184)
+
+[node name="Marker2D6" type="Marker2D" parent="FlagPositions"]
+position = Vector2(487, 182)
+
+[node name="Marker2D7" type="Marker2D" parent="FlagPositions"]
+position = Vector2(350, 183)
+
+[node name="Marker2D8" type="Marker2D" parent="FlagPositions"]
+position = Vector2(150, 182)
+
+[node name="Marker2D9" type="Marker2D" parent="FlagPositions"]
+position = Vector2(151, 424)
+
+[node name="Marker2D10" type="Marker2D" parent="FlagPositions"]
+position = Vector2(251, 424)
+
+[node name="Marker2D11" type="Marker2D" parent="FlagPositions"]
+position = Vector2(351, 299)
+
+[node name="Marker2D12" type="Marker2D" parent="FlagPositions"]
+position = Vector2(482, 303)
+
+[node name="Marker2D13" type="Marker2D" parent="FlagPositions"]
+position = Vector2(590, 304)
+
+[node name="Marker2D14" type="Marker2D" parent="FlagPositions"]
+position = Vector2(587, 426)
+
+[node name="Marker2D15" type="Marker2D" parent="FlagPositions"]
+position = Vector2(253, 304)
+
+[node name="Marker2D16" type="Marker2D" parent="FlagPositions"]
+position = Vector2(420, 420)
+
+[node name="Marker2D17" type="Marker2D" parent="FlagPositions"]
+position = Vector2(350, 500)
+
+[node name="Marker2D18" type="Marker2D" parent="FlagPositions"]
+position = Vector2(491, 505)
+
+[node name="Marker2D19" type="Marker2D" parent="FlagPositions"]
+position = Vector2(421, 589)
+
+[node name="Marker2D20" type="Marker2D" parent="FlagPositions"]
+position = Vector2(585, 503)
+
+[node name="Marker2D21" type="Marker2D" parent="FlagPositions"]
+position = Vector2(250, 504)
+
+[node name="Marker2D22" type="Marker2D" parent="FlagPositions"]
+position = Vector2(150, 505)
+
+[node name="Marker2D23" type="Marker2D" parent="FlagPositions"]
+position = Vector2(694, 506)
+
+[node name="Marker2D24" type="Marker2D" parent="FlagPositions"]
+position = Vector2(691, 429)
+
+[node name="Marker2D25" type="Marker2D" parent="FlagPositions"]
+position = Vector2(690, 585)
+
+[node name="Marker2D26" type="Marker2D" parent="FlagPositions"]
+position = Vector2(152, 586)
+
+[node name="Marker2D27" type="Marker2D" parent="FlagPositions"]
+position = Vector2(247, 586)
+
+[node name="Marker2D28" type="Marker2D" parent="FlagPositions"]
+position = Vector2(589, 589)
+
+[node name="Marker2D29" type="Marker2D" parent="FlagPositions"]
+position = Vector2(586, 708)
+
+[node name="Marker2D30" type="Marker2D" parent="FlagPositions"]
+position = Vector2(248, 707)
+
+[node name="Marker2D31" type="Marker2D" parent="FlagPositions"]
+position = Vector2(491, 824)
+
+[node name="Marker2D34" type="Marker2D" parent="FlagPositions"]
+position = Vector2(323, 832)
+
+[node name="Marker2D35" type="Marker2D" parent="FlagPositions"]
+position = Vector2(152, 825)
+
+[node name="Marker2D36" type="Marker2D" parent="FlagPositions"]
+position = Vector2(323, 945)
+
+[node name="Marker2D37" type="Marker2D" parent="FlagPositions"]
+position = Vector2(521, 952)
+
+[node name="Marker2D38" type="Marker2D" parent="FlagPositions"]
+position = Vector2(687, 827)
+
+[node name="Marker2D39" type="Marker2D" parent="FlagPositions"]
+position = Vector2(792, 947)
+
+[node name="Marker2D40" type="Marker2D" parent="FlagPositions"]
+position = Vector2(52, 943)
+
+[node name="Marker2D41" type="Marker2D" parent="FlagPositions"]
+position = Vector2(47, 828)
+
+[node name="Marker2D42" type="Marker2D" parent="FlagPositions"]
+position = Vector2(791, 829)
+
+[node name="Marker2D43" type="Marker2D" parent="FlagPositions"]
+position = Vector2(791, 501)
+
+[node name="Marker2D44" type="Marker2D" parent="FlagPositions"]
+position = Vector2(47, 506)
+
+[node name="Marker2D45" type="Marker2D" parent="FlagPositions"]
+position = Vector2(47, 180)
+
+[node name="Marker2D46" type="Marker2D" parent="FlagPositions"]
+position = Vector2(791, 181)
+
+[node name="Marker2D32" type="Marker2D" parent="FlagPositions"]
+position = Vector2(349, 708)
+
+[node name="Marker2D33" type="Marker2D" parent="FlagPositions"]
+position = Vector2(486, 708)
+
+[node name="Flag" parent="." instance=ExtResource("6_a6wmq")]
+position = Vector2(791, 501)
 
 [connection signal="hit" from="Enemies" to="Player" method="_on_enemies_hit"]

@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var speed: int = 200
+var speed: int = 150
 var direction: Vector2 = Vector2.ZERO
 var ready_track = 0
 signal hit
