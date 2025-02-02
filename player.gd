@@ -10,7 +10,5 @@ func _process(_delta: float) -> void:
 	velocity = direction * speed
 	move_and_slide()
 	Variables.player_pos = position
-
-
-func _on_enemies_hit() -> void:
-	print("Player died")
+	Variables.tracker1_pos = $Tracker1.position
+	Variables.tracker2_pos = $Tracker2.position

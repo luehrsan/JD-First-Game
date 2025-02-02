@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://bontuploty6sc"]
+[gd_scene load_steps=13 format=4 uid="uid://bontuploty6sc"]
 
 [ext_resource type="Texture2D" uid="uid://dwty1rvdf0ubq" path="res://Art/WallFlagRush.png" id="1_3oj87"]
 [ext_resource type="Script" path="res://level.gd" id="1_wqamp"]
@@ -53,6 +53,10 @@ physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 11
 sources/0 = SubResource("TileSetAtlasSource_tfhqa")
 sources/3 = SubResource("TileSetAtlasSource_w27x0")
+
+[sub_resource type="LabelSettings" id="LabelSettings_jtgo2"]
+font_size = 64
+font_color = Color(100, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_37gmp"]
 font_size = 30
@@ -216,14 +220,39 @@ position = Vector2(486, 708)
 [node name="Flag" parent="." instance=ExtResource("6_a6wmq")]
 position = Vector2(791, 501)
 
-[node name="Enemies2" parent="." instance=ExtResource("4_t7ben")]
-position = Vector2(745, 60)
+[node name="Enemies" parent="." groups=["Enemies"] instance=ExtResource("4_t7ben")]
+position = Vector2(756, 948)
 
-[node name="Enemies3" parent="." instance=ExtResource("4_t7ben")]
-position = Vector2(749, 949)
+[node name="Enemies2" parent="." groups=["Enemies"] instance=ExtResource("4_t7ben")]
+position = Vector2(691, 499)
 
-[node name="Enemies" parent="." instance=ExtResource("4_t7ben")]
-position = Vector2(692, 507)
+[node name="Enemies3" parent="." groups=["Enemies"] instance=ExtResource("4_t7ben")]
+position = Vector2(750, 58)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 841.0
+offset_bottom = 1007.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Youdied" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 285.5
+offset_top = 467.5
+offset_right = 1485.5
+offset_bottom = 1667.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "You died"
+label_settings = SubResource("LabelSettings_jtgo2")
 
 [node name="Score" type="Label" parent="."]
 anchors_preset = 4
@@ -239,8 +268,13 @@ text = "Score: 0"
 label_settings = SubResource("LabelSettings_37gmp")
 horizontal_alignment = 1
 
+[node name="RestartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
 [connection signal="reposition" from="." to="Flag" method="_on_level_reposition"]
 [connection signal="point" from="Flag" to="." method="_on_flag_point"]
-[connection signal="hit" from="Enemies2" to="Player" method="_on_enemies_hit"]
-[connection signal="hit" from="Enemies3" to="Player" method="_on_enemies_hit"]
-[connection signal="hit" from="Enemies" to="Player" method="_on_enemies_hit"]
+[connection signal="hit" from="Enemies" to="." method="_on_enemies_hit"]
+[connection signal="hit" from="Enemies2" to="." method="_on_enemies_2_hit"]
+[connection signal="hit" from="Enemies3" to="." method="_on_enemies_3_hit"]
+[connection signal="timeout" from="RestartTimer" to="." method="_on_restart_timer_timeout"]
