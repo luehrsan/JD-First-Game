@@ -12,7 +12,7 @@ vertices = PackedVector2Array(510.211, 946.961, 778.211, 948.039, 508.109, 947, 
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11, 12, 13, 14), PackedInt32Array(15, 4, 16), PackedInt32Array(17, 9, 8), PackedInt32Array(18, 19, 20, 21), PackedInt32Array(22, 23, 21, 20), PackedInt32Array(24, 25, 7, 26, 27, 1), PackedInt32Array(7, 25, 3), PackedInt32Array(4, 15, 28), PackedInt32Array(5, 4, 28), PackedInt32Array(5, 28, 29), PackedInt32Array(25, 24, 30), PackedInt32Array(31, 16, 32, 33, 10, 34), PackedInt32Array(26, 7, 35), PackedInt32Array(36, 9, 17), PackedInt32Array(37, 17, 8, 38), PackedInt32Array(39, 40, 41, 42), PackedInt32Array(43, 44, 45, 46), PackedInt32Array(47, 22, 48, 49, 50), PackedInt32Array(2, 1, 27, 51, 52), PackedInt32Array(53, 26, 35), PackedInt32Array(54, 12, 55, 52), PackedInt32Array(56, 57, 58, 59, 60), PackedInt32Array(61, 36, 17, 62), PackedInt32Array(63, 36, 61, 64), PackedInt32Array(58, 57, 65, 66), PackedInt32Array(66, 65, 67, 68), PackedInt32Array(69, 66, 68, 70, 71), PackedInt32Array(72, 53, 35, 73), PackedInt32Array(72, 73, 74, 75), PackedInt32Array(72, 75, 76, 77), PackedInt32Array(78, 72, 77, 79, 80), PackedInt32Array(81, 21, 23, 82), PackedInt32Array(24, 1, 83), PackedInt32Array(84, 48, 22, 20), PackedInt32Array(85, 45, 44, 63, 64), PackedInt32Array(85, 64, 86, 87), PackedInt32Array(38, 8, 88, 89), PackedInt32Array(33, 24, 83, 90), PackedInt32Array(10, 33, 90, 11), PackedInt32Array(74, 73, 6, 91), PackedInt32Array(92, 91, 6, 5, 93, 94), PackedInt32Array(95, 94, 96, 97), PackedInt32Array(76, 75, 92, 98), PackedInt32Array(19, 18, 93, 99), PackedInt32Array(20, 5, 29, 84), PackedInt32Array(62, 17, 100, 86), PackedInt32Array(67, 65, 101, 87), PackedInt32Array(31, 34, 43, 102), PackedInt32Array(103, 102, 43, 46, 47, 50), PackedInt32Array(0, 2, 11, 90), PackedInt32Array(25, 30, 32, 16), PackedInt32Array(12, 54, 13), PackedInt32Array(5, 99, 93), PackedInt32Array(98, 92, 94, 79), PackedInt32Array(79, 94, 95, 80), PackedInt32Array(18, 21, 42, 104), PackedInt32Array(105, 104, 42, 41), PackedInt32Array(105, 41, 106, 96), PackedInt32Array(88, 97, 96, 106, 107, 89), PackedInt32Array(87, 101, 85), PackedInt32Array(108, 109, 87, 86, 100), PackedInt32Array(108, 100, 110), PackedInt32Array(108, 110, 111, 112), PackedInt32Array(16, 31, 113, 15), PackedInt32Array(50, 15, 113, 103), PackedInt32Array(114, 47, 46), PackedInt32Array(114, 46, 56, 60), PackedInt32Array(60, 59, 115, 116), PackedInt32Array(82, 116, 115, 117), PackedInt32Array(81, 82, 117), PackedInt32Array(118, 81, 117, 119), PackedInt32Array(71, 118, 119, 69), PackedInt32Array(120, 71, 70, 112), PackedInt32Array(39, 120, 112), PackedInt32Array(40, 39, 112, 111), PackedInt32Array(40, 111, 89, 107), PackedInt32Array(97, 88, 121, 122), PackedInt32Array(52, 55, 2), PackedInt32Array(123, 52, 51, 124), PackedInt32Array(13, 123, 124), PackedInt32Array(13, 124, 78), PackedInt32Array(14, 13, 78, 121), PackedInt32Array(122, 121, 78, 80)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(790, 75, 764, 75, 519, 74, 498, 74, 318, 73, 297, 73, 43, 73, 21, 80, 22, 46, 791, 45), PackedVector2Array(25, 959, 48, 960, 49, 939, 48, 841, 48, 818, 46, 521, 46, 493, 44, 195, 44, 171, 43, 73, 21, 80), PackedVector2Array(44, 171, 294, 169, 297, 73, 318, 73, 318, 171, 496, 170, 498, 74, 519, 74, 521, 170, 767, 168, 764, 75, 790, 75, 792, 960, 48, 960, 49, 939, 294, 938, 298, 846, 48, 841, 48, 818, 128, 817, 128, 522, 46, 521, 46, 493, 128, 492, 129, 196, 151, 196, 150, 411, 228, 412, 228, 291, 327, 291, 326, 197, 348, 199, 352, 291, 460, 297, 462, 196, 486, 196, 483, 295, 586, 293, 587, 318, 585, 410, 666, 412, 664, 196, 690, 196, 686, 491, 767, 494, 767, 520, 689, 521, 689, 818, 767, 817, 766, 843, 518, 843, 520, 937, 498, 937, 497, 843, 497, 816, 665, 816, 665, 603, 665, 575, 664, 441, 586, 443, 562, 443, 564, 319, 416, 322, 394, 321, 256, 320, 250, 439, 228, 439, 151, 441, 151, 575, 150, 598, 151, 816, 320, 813, 320, 843.896, 320, 937, 498, 937, 520, 937, 768, 938, 766, 843, 767, 817, 767, 520, 767, 494, 766, 196, 690, 196, 664, 196, 486, 196, 462, 196, 348, 199, 326, 197, 151, 196, 129, 196, 44, 195), PackedVector2Array(394, 321, 416, 322, 416, 413, 485, 412, 485, 496, 561, 496, 562, 443, 586, 443, 587, 575, 665, 575, 665, 603, 585, 601, 587, 721, 487, 722, 487, 815, 497, 816, 497, 843, 320, 844, 320, 813, 326, 813.93, 326, 721, 227, 722, 227, 602, 150, 598, 151, 575, 223, 572, 228, 439, 250, 439, 251, 495, 330, 495, 327, 412, 393, 413, 392, 441, 351, 443, 353, 522, 329, 522, 249, 525, 251, 692, 351, 692, 351, 721, 354, 815, 464, 812, 460, 721, 460, 694, 563, 691, 562, 520, 486, 521, 462, 521, 461, 441, 392, 441, 393, 413), PackedVector2Array(351, 692, 351, 721, 460, 721, 460, 694, 422, 692, 418, 601, 490, 602, 486, 521, 462, 521, 462, 573, 353, 572, 353, 522, 329, 522, 327, 601, 395, 601, 394, 695)])
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_45ct2"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tfhqa"]
 texture = ExtResource("1_3oj87")
 texture_region_size = Vector2i(30, 30)
 0:0/0 = 0
@@ -34,7 +34,7 @@ texture_region_size = Vector2i(30, 30)
 2:0/0 = 0
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-15, -15, 15, -15, 15, 15, -15, 15)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7o8qb"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w27x0"]
 texture = ExtResource("2_wg1sv")
 margins = Vector2i(9, 2)
 texture_region_size = Vector2i(30, 30)
@@ -51,17 +51,14 @@ texture_region_size = Vector2i(30, 30)
 tile_size = Vector2i(30, 30)
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 11
-sources/0 = SubResource("TileSetAtlasSource_45ct2")
-sources/3 = SubResource("TileSetAtlasSource_7o8qb")
+sources/0 = SubResource("TileSetAtlasSource_tfhqa")
+sources/3 = SubResource("TileSetAtlasSource_w27x0")
 
 [sub_resource type="LabelSettings" id="LabelSettings_37gmp"]
 font_size = 30
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_wqamp")
-
-[node name="Enemies" parent="." instance=ExtResource("4_t7ben")]
-position = Vector2(745, 60)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 position = Vector2(12, -3)
@@ -219,6 +216,15 @@ position = Vector2(486, 708)
 [node name="Flag" parent="." instance=ExtResource("6_a6wmq")]
 position = Vector2(791, 501)
 
+[node name="Enemies2" parent="." instance=ExtResource("4_t7ben")]
+position = Vector2(745, 60)
+
+[node name="Enemies3" parent="." instance=ExtResource("4_t7ben")]
+position = Vector2(749, 949)
+
+[node name="Enemies" parent="." instance=ExtResource("4_t7ben")]
+position = Vector2(692, 507)
+
 [node name="Score" type="Label" parent="."]
 anchors_preset = 4
 anchor_top = 0.5
@@ -233,4 +239,8 @@ text = "Score: 0"
 label_settings = SubResource("LabelSettings_37gmp")
 horizontal_alignment = 1
 
+[connection signal="reposition" from="." to="Flag" method="_on_level_reposition"]
+[connection signal="point" from="Flag" to="." method="_on_flag_point"]
+[connection signal="hit" from="Enemies2" to="Player" method="_on_enemies_hit"]
+[connection signal="hit" from="Enemies3" to="Player" method="_on_enemies_hit"]
 [connection signal="hit" from="Enemies" to="Player" method="_on_enemies_hit"]

@@ -15,3 +15,7 @@ func _process(_delta: float) -> void:
 func _on_body_entered(_body: Node2D) -> void:
 	point.emit()
 	print("flag point")
+
+
+func _on_level_reposition() -> void:
+	position = Variables.flag_pos
