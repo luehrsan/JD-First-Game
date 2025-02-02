@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://bontuploty6sc"]
+[gd_scene load_steps=12 format=4 uid="uid://bontuploty6sc"]
 
 [ext_resource type="Texture2D" uid="uid://dwty1rvdf0ubq" path="res://Art/WallFlagRush.png" id="1_3oj87"]
 [ext_resource type="Script" path="res://level.gd" id="1_wqamp"]
@@ -53,6 +53,9 @@ physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 11
 sources/0 = SubResource("TileSetAtlasSource_45ct2")
 sources/3 = SubResource("TileSetAtlasSource_7o8qb")
+
+[sub_resource type="LabelSettings" id="LabelSettings_37gmp"]
+font_size = 30
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_wqamp")
@@ -215,5 +218,19 @@ position = Vector2(486, 708)
 
 [node name="Flag" parent="." instance=ExtResource("6_a6wmq")]
 position = Vector2(791, 501)
+
+[node name="Score" type="Label" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 366.0
+offset_top = 37.0
+offset_right = 481.0
+offset_bottom = 124.0
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_37gmp")
+horizontal_alignment = 1
 
 [connection signal="hit" from="Enemies" to="Player" method="_on_enemies_hit"]

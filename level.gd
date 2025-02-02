@@ -1,6 +1,6 @@
 extends Node2D
 
-
+var score = 0
 var points = []
 func _ready() -> void:
 	for child in $FlagPositions.get_children():
@@ -14,3 +14,5 @@ func _process(_delta: float) -> void:
 
 func _on_flag_point():
 	print("point")
+	score+= 1
+	$Score.text = "Score: " + score 
